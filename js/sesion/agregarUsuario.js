@@ -1,10 +1,10 @@
-const inputNombre = document.querySelector("#nombres");
-const inputApellido = document.querySelector("#apellidos");
-const inputCedula = document.querySelector("#cedula");
-const inputTelefono = document.querySelector("#telefono");
+const inputNombre = document.querySelector("#name");
+const inputApellido = document.querySelector("#lastname");
+const inputTelefono = document.querySelector("#phone");
 const inputEmail = document.querySelector("#email");
+const inputAddress = document.querySelector("#address");
+const inputPassword = document.querySelector("#password");
 const inputRol = document.querySelector("#rol");
-const inputContraseña = document.querySelector("#contraseña");
 const form = document.querySelector("#formRegistro");
 const url = "https://backendprojectfundation.onrender.com";
 const alertMessage = document.querySelector("#alert");
@@ -14,8 +14,8 @@ form.addEventListener("submit", validarFormulario);
 async function validarFormulario(evt) {
 evt.preventDefault();
 
-    if (inputNombre.value === "" || inputApellido.value === "" || inputContraseña.value === "" || inputEmail.value === ""
-        || inputCedula.value === "" || inputTelefono.value === "") {
+    if (inputNombre.value === "" || inputApellido.value === "" || inputPassword.value === "" || inputEmail.value === ""
+        || inputAddress.value === "" || inputTelefono.value === "") {
     alert("Por favor, complete todos los campos obligatorios.");
     return;
 }
@@ -34,11 +34,11 @@ const rolesMap = {
 const nuevoUsuario = {
     name: inputNombre.value,
     lastname: inputApellido.value,
-    cedula: inputCedula.value,
     telefono: inputTelefono.value,
     email: inputEmail.value,
+    address: inputAddress.value,
+    contraseña: inputPassword.value,
     rol: rolNumero,
-    contraseña: inputContraseña.value
 };
 
     try {
