@@ -12,8 +12,8 @@ async function fetchAnimales() {
             const animalCard = `
                 <div class="item dog col-md-4 col-lg-3 my-4">
                     <div class="card position-relative">
-                        <a href="#" class="popup-trigger" data-popup-text="<strong>Edad:</strong> ${animal.age}<br><strong>Raza:</strong> ${animal.race}<br><strong>Historia:</strong> ${animal.historia}<br><strong>Enfermedades:</strong> ${animal.enfermedades}">
-                            <img src="${animal.imagen}" class="img-fluid rounded-4" alt="image" title="Haz clic para ver más detalles sobre ${animal.name}">
+                        <a href="#" class="popup-trigger" data-popup-text="<strong>Fecha de nacimiento:</strong> ${animal.stimated_date_birth}<br><strong>Raza:</strong> ${animal.breed_id}<br><strong>Historia:</strong> ${animal.history}<br><strong>Enfermedades:</strong> ${animal.enfermedades}">
+                            <img src="${animal.image}" class="img-fluid rounded-4" alt="image" title="Haz clic para ver más detalles sobre ${animal.name}">
                         </a>
                         <div class="card-body p-0">
                             <a href="single-product.html">
