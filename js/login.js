@@ -1,5 +1,5 @@
 const inputEmail = document.querySelector("#email");
-const inputContraseña = document.querySelector("#contraseña");
+const inputContraseña = document.querySelector("#password");
 const form = document.querySelector("#formLogin");
 const url = "https://backendprojectfundation.onrender.com";
 const alertMessage = document.querySelector("#alert");
@@ -27,8 +27,8 @@ async function validarFormulario(evt) {
   location.replace("../sesionAdmin/sesion.html");
 }
 
-async function login(email, contraseña) {
-  const body = { email, contraseña };
+async function login(email, password) {
+  const body = { email, password };
   const res = await fetch(`${url}/login`, {
     headers: {
       "Content-Type": "application/json",
