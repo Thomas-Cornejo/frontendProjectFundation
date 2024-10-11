@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/styles1.css">
     <title>Login AnymalNest</title>
+    <style>
+        #back-to-index {
+    background-color: transparent; 
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px; 
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+#back-to-index:hover {
+    background-color: white; 
+    color: black;
+}
+
+
+    </style>
 </head>
 
 <body id="page-top">
@@ -39,12 +62,17 @@
                 <div class="toggle-panel toggle-right">
                     <h1>Bienvenido, amigo!</h1>
                     <p>Ingrese sus credenciales para entrar en AnymalNest</p>
-                    <button class="hidden" id="back-to-index" href="../index.html">Volver</button>
+                    <button id="back-to-index">Volver</button>
                 </div>
             </div>
         </div>
     </div>
 </header>
+<script>
+    document.getElementById("back-to-index").addEventListener("click", function() {
+        window.location.href = "../index.html"; // Cambia la URL si es necesario
+    });
+</script>
     <script src="../js/login.js"></script>
 </body>
 
