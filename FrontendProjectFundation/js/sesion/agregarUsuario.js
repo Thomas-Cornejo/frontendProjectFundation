@@ -49,11 +49,9 @@ const nuevoUsuario = {
     },
     body: JSON.stringify(nuevoUsuario)
     });
-
     if (!response.ok) {
     throw new Error("Error al crear el usuario.");
     }
-
     const json = await response.json();
     console.log("Usuario creado:", json);
 
