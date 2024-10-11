@@ -15,13 +15,13 @@ async function filtroRol() {
       "</div></td><td><div>" +
       usuario[i].lastname +
       "</div></td><td><div>" +
-      usuario[i].email +
+      usuario[i].phone +
       "</div></td><td><div>" +
-      usuario[i].telefono +
+      usuario[i].address +
       "</div></td><td><div>" +
-      usuario[i].cedula +
+      usuario[i].password +
       "</div></td><td><div>" +
-      usuario[i].rol +
+      usuario[i].rol_id +
       "</div></td><td><div>" +
       '<a href="editarURegistrados.html?id=' +
       usuario[i].id +
@@ -46,10 +46,10 @@ async function mostrarInformacion() {
       <tr id="usuario-${usuarioActual.id}">
         <td><div>${usuarioActual.name}</div></td>
         <td><div>${usuarioActual.lastname}</div></td>
-        <td><div>${usuarioActual.email}</div></td>
-        <td><div>${usuarioActual.telefono}</div></td>
-        <td><div>${usuarioActual.cedula}</div></td>
-        <td><div>${usuarioActual.rol}</div></td>
+        <td><div>${usuarioActual.phone}</div></td>
+        <td><div>${usuarioActual.address}</div></td>
+        <td><div>${usuarioActual.password}</div></td>
+        <td><div>${usuarioActual.rol_id}</div></td>
         <td>
           <div>
             <a href="editarURegistrados.html?id=${usuarioActual.id}" class="btn btn-quinto">Editar</a>
