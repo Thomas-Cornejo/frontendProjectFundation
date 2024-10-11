@@ -4,7 +4,7 @@ async function filtroRol() {
   document.querySelector("#root").innerHTML = "";
   const rol = inputRol.options[inputRol.selectedIndex].value;
   console.log(rol);
-  const response = await fetch(`http://localhost:3000/filtro/${rol}`);
+  const response = await fetch(`https://backendprojectfundation.onrender.com/filtro/${rol}`);
   const usuario = await response.json();
 
   console.log(usuario);
@@ -37,7 +37,7 @@ async function filtroRol() {
 }
 
 async function mostrarInformacion() {
-  const response = await fetch(`http://localhost:3000/usuarios`);
+  const response = await fetch(`https://backendprojectfundation.onrender.com/usuarios`);
 
   const usuario = await response.json();
   for (let i = 0; i < usuario.length; i++) {

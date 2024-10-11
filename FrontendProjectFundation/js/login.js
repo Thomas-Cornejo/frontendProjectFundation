@@ -1,7 +1,7 @@
 const inputEmail = document.querySelector("#email");
 const inputContraseña = document.querySelector("#contraseña");
 const form = document.querySelector("#formLogin");
-const url = "http://localhost:3000";
+const url = "https://backendprojectfundation.onrender.com";
 const alertMessage = document.querySelector("#alert");
 
 form.addEventListener("submit", validarFormulario);

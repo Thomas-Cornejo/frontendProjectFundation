@@ -8,7 +8,7 @@ const inputEnfermedad = document.querySelector("#diseases");
 const inputImagen = document.querySelector("#imagen");
 const form = document.querySelector("#formRegistro");
 const alertMessage = document.querySelector("#alert");
-const url = "http://localhost:3000";
+const url = "https://backendprojectfundation.onrender.com";
 
 form.addEventListener("submit", validarFormulario);
 

@@ -2,7 +2,7 @@ async function mostrarInformacion() {
     // const id = localStorage.getItem("ID_ANIMAL");
     // console.log(id);
     try {
-    const response = await fetch(`http://localhost:3000/animals/5`);
+    const response = await fetch(`https://backendprojectfundation.onrender.com/animals/5`);
     if (!response.ok) {
         throw new Error("No se pudo obtener el animal");
     }

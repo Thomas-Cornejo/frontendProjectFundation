@@ -2,7 +2,7 @@ async function mostrarInformacion() {
     const id = localStorage.getItem("ID_USER");
     console.log(id);
     try {
-    const response = await fetch(`http://localhost:3000/usuarios/${id}`);
+    const response = await fetch(`https://backendprojectfundation.onrender.com/usuarios/${id}`);
     if (!response.ok) {
         throw new Error("No se pudo obtener el usuario");
     }
