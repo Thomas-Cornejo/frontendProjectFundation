@@ -45,41 +45,47 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Nombre del animal" id="name"
                             aria-describedby="basic-addon1" required />
-                        <div class="invalid-feedback" data-sb-feedback="name:required">Es necesario un nombre.</div>
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Edad del animal" id="stimated_date_birth"
+                        <select class="form-select" id="breed_id" required>
+                            <option value="">Seleccione una raza</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="2">3</option>
+                            <option value="2">4</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Edad estimada del animal" id="stimated_date_birth"
                             aria-describedby="basic-addon1" required />
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Raza del animal" id="breed_id"
-                            aria-describedby="basic-addon1" required />
-                    </div>
-                    <div class="input-group mb-3">
-                        <select class="form-select" id="gender" required>
+                        <select class="form-select" id="sex" required>
                             <option value="">Seleccione un genero</option>
                             <option value="1">Macho</option>
                             <option value="2">Hembra</option>
                         </select>
                     </div>
+
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Peso del animal" id="weight"
-                            aria-describedby="basic-addon1" required />
-                    </div>
-                    <div class="input-group mb-3">
-                        <textarea class="form-control" placeholder="Historia del animal" id="history"
-                            aria-describedby="basic-addon1" required rows="5" cols="50"></textarea>
+                        <input type= "text" class="form-control" placeholder="Tamaño del animal" id = "size" aria-describedby="basic-addon1" required />
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Enfermedades del animal" id="diseases"
+                        <input type= "text" class="form-control" placeholder="Color del animal" id = "color" aria-describedby="basic-addon1" required />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" name="imagen" accept="image/*" id="image"
                             aria-describedby="basic-addon1" required />
                     </div>
+
                     <div class="input-group mb-3">
-                        <input type="file" class="form-control" name="imagen" accept="image/*" id="imagen"
-                            aria-describedby="basic-addon1" required />
+                        <textarea class="form-control" placeholder="Historia del animal" id="history"
+                            aria-describedby="basic-addon1" required rows="5" cols="50"></textarea>
                     </div>
 
                     <div id="alert" class="alert" role="alert" style="display: none;"></div>

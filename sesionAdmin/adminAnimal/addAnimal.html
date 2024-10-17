@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/stylesFormU.css">
+    <title>Add animal</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Registra el animal</div>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <span>Nombre del animalito</span>
+                <input type="text" class="form-control" placeholdere = "Ingrese un nombre" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <span>Seleccione la raza del animalito</span>
+                <select class="form-select" id="breed_id" required>
+                    <option value="">Otro</option>
+                    <option value="1">----</option>
+                    <option value="2">----</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <span>Fecha estimada de nacimiento</span>
+                <input type="date" id="stimated_date_birth" name="trip-start" value="2018-07-22" min="2008-01-01" max="2024-12-31" />
+            </div>
+            <div class="form-group">
+                <span>Sexo</span>
+                <select class="form-select" id="breed_id" required>
+                    <option value="">Otro</option>
+                    <option value="1">...</option>
+                    <option value="2">---</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <span>Tamaño</span>
+                <input type="text" class="form-control" placeholdere = "Ingrese un nombre" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <span>Inserte imagen del animalito</span>
+                <input type="file" id="file-input" name="file" hidden>
+                <label for="file-input" class="file-label">Seleccionar archivo</label>
+                <span id="file-chosen">Ningún archivo seleccionado</span>
+            </div>
+            
+            <div class="button">
+                <input type="button" value="Registrar">
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    const fileInput = document.getElementById('file-input');
+    const fileChosen = document.getElementById('file-chosen');
+    fileInput.addEventListener('change', function() {
+        fileChosen.textContent = this.files[0].name;
+    });
+</script>
+
+</html>

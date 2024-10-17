@@ -1,11 +1,11 @@
 const inputNombre = document.querySelector("#name");
-const inputEdad = document.querySelector("#age");
-const inputRaza = document.querySelector("#race");
-const inputGenero = document.querySelector("#gender");
-const inputPeso = document.querySelector("#weight");
-const areaHistoria = document.querySelector("#history");
-const inputEnfermedad = document.querySelector("#diseases");
-const inputImagen = document.querySelector("#imagen");
+const inputRaza = document.querySelector("#breed_id");
+const inputBirthDate = document.querySelector("#stimated_date_birth");
+const inputSex = document.querySelector("#sex");
+const inputSize = document.querySelector("#size");
+const inputColor = document.querySelector("#color");
+const inputImage = document.querySelector("#image");
+const inputHistory = document.querySelector("#history")
 const form = document.querySelector("#formRegistro");
 const alertMessage = document.querySelector("#alert");
 const url = "https://backendprojectfundation.onrender.com";
@@ -16,32 +16,32 @@ async function validarFormulario(evt) {
     evt.preventDefault();
 
     const name = inputNombre.value;
-    const age = inputEdad.value;
-    const race = inputRaza.value;
-    const gender = inputGenero.value;
-    const weight = inputPeso.value;
-    const history = areaHistoria.value;
-    const diseases = inputEnfermedad.value;
-    const imagen = inputImagen.files[0];
+    const breed = inputRaza.value;
+    const date = inputBirthDate;
+    const sex = inputSex.value;
+    const size = inputSize.value;
+    const color = inputColor.value;
+    const image = inputImage.files[0];
+    const history = inputHistory.value;
 
-    const nuevoAnimal = await crearAnimal({ name, age, race, gender, weight, history, diseases, imagen });
+    const nuevoAnimal = await crearAnimal({ name, breed, date, sex, size, color, image, history });
     if (!nuevoAnimal.error) {
         showAlert("success", `Registro del animal exitoso. Animal ${name} ingresado.`);
         form.reset();
     }
 }
 
-async function crearAnimal({ name, age, race, gender, weight, history, diseases, imagen }) {
+async function crearAnimal({ name, breed, date, sex, size, color, image, history }) {
     try {
         const formData = new FormData();
         formData.append("name", name);
-        formData.append("age", age);
-        formData.append("race", race);
-        formData.append("gender", gender);
-        formData.append("weight", weight);
+        formData.append("breed_id", breed);
+        formData.append("stimated_date_birth", date);
+        formData.append("sex", sex);
+        formData.append("size", size);
+        formData.append("color", color);
+        formData.append("image", image);
         formData.append("history", history);
-        formData.append("diseases", diseases);
-        formData.append("imagen", imagen);
 
         const response = await fetch(`${url}/animals/crear`, {
             method: "POST",
