@@ -16,7 +16,7 @@ async function validarFormulario(evt) {
     evt.preventDefault();
 
     const name = inputNombre.value;
-    const breed = inputRaza.value;
+    const breed_id = inputRaza.value;
     const date = inputBirthDate;
     const sex = inputSex.value;
     const size = inputSize.value;
@@ -24,7 +24,7 @@ async function validarFormulario(evt) {
     const image = inputImage.files[0];
     const history = inputHistory.value;
 
-    const nuevoAnimal = await crearAnimal({ name, breed, date, sex, size, color, image, history });
+    const nuevoAnimal = await crearAnimal({ name, breed_id, date, sex, size, color, image, history });
     if (!nuevoAnimal.error) {
         showAlert("success", `Registro del animal exitoso. Animal ${name} ingresado.`);
         form.reset();
@@ -35,7 +35,7 @@ async function crearAnimal({ name, breed, date, sex, size, color, image, history
     try {
         const formData = new FormData();
         formData.append("name", name);
-        formData.append("breed_id", breed);
+        formData.append("breed_id", breed_id);
         formData.append("stimated_date_birth", date);
         formData.append("sex", sex);
         formData.append("size", size);
