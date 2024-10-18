@@ -25,6 +25,7 @@ async function validarFormulario(evt) {
     const history = inputHistory.value;
 
     const nuevoAnimal = await crearAnimal({ name, breed_id, date, sex, size, color, image, history });
+    console.log(nuevoAnimal);
     if (!nuevoAnimal.error) {
         showAlert("success", `Registro del animal exitoso. Animal ${name} ingresado.`);
         form.reset();
