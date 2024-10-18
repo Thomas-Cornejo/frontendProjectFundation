@@ -17,7 +17,7 @@ async function validarFormulario(evt) {
 
     const name = inputNombre.value;
     const breed_id = inputRaza.value;
-    const date = inputBirthDate;
+    const date = inputBirthDate.value;
     const sex = inputSex.value;
     const size = inputSize.value;
     const color = inputColor.value;
