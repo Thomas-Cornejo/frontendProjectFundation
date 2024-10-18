@@ -32,7 +32,7 @@ async function validarFormulario(evt) {
     }
 }
 
-async function crearAnimal({ name, breed, date, sex, size, color, image, history }) {
+async function crearAnimal({ name, breed_id, date, sex, size, color, image, history }) {
     try {
         const formData = new FormData();
         formData.append("name", name);
