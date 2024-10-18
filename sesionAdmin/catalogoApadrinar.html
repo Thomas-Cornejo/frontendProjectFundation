@@ -12,7 +12,89 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
 </head>
-
+<style>
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+  }
+  
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      margin-top: 40px;
+  }
+  .item {
+      width: 280px;
+  }
+  
+  .card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+      transform: translateY(-5px);
+  }
+  
+  .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+  .card-body {
+      text-align: center;
+      padding: 15px;
+  }
+  
+  .card-title {
+      font-size: 1.4rem;
+      color: #333;
+      margin-top: 10px;
+      font-weight: bold;
+  }
+  
+  .btn-cart, .btn-wishlist {
+      display: inline-block;
+      background-color: #ffffff;
+      border: 2px solid #ffa500;
+      color: #ffa500;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-cart:hover, .btn-wishlist:hover {
+      background-color: #ffa500;
+      color: #ffffff;
+  }
+  
+  .btn-cart {
+      padding: 10px 20px;
+      margin-right: 10px;
+  }
+  
+  .btn-wishlist {
+      padding: 10px 14px;
+  }
+  
+  .iconify-icon {
+      font-size: 1.4rem;
+      color: #ffa500;
+  }
+  
+  /* Ajustes para vista responsive */
+  @media (max-width: 768px) {
+      .item {
+          width: 100%;
+      }
+  }
+  </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
