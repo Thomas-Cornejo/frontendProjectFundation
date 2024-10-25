@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    background-color: #006d6d;
+    color: white;
+    padding: 20px; /* Espaciado en el header */
+}
+
+header .logo {
+    margin-right: auto; /* Permitir que el logo empuje al nav a la derecha */
+}
+
+header .logo img {
+    width: 100px; /* Ajustar el tamaño del logo */
+    height: auto;
+}
+
+header nav {
+    margin-left: 800px; /* Permitir que el nav esté al final a la derecha */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    font-size: 16px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #006d6d;
+    width: 180px;
+    text-decoration: none; /* Quitar el subrayado de los enlaces */
+}
+
+.login-button .icon {
+    margin-left: 10px;
+    font-size: 24px; 
+}
+
+.login-button:hover {
+    background-color: #224444;
+    color: white;
+}
+
+main {
+    flex: 1;
+    margin: 20px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.welcome .text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.welcome .animals {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+}
+
+.welcome h1 {
+    color: #006d6d;
+    font-size: 2.5em;
+}
+
+.about, .join-us {
+    margin: 20px 0;
+}
+
+.about h2, .join-us h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #006d6d;
+}
+
+.about p, .join-us p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.animals {
+    margin-top: 20px;
+    max-width: 80%;
+    height: auto;
+}
+
+.contact {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.contact h3 {
+    color: #006d6d;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.contact .info {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.contact-info, .social-media {
+    font-size: 1.1em;
+}

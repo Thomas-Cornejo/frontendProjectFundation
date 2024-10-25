@@ -1,10 +1,10 @@
-const inputNombre = document.querySelector("#nombres");
-const inputApellido = document.querySelector("#apellidos");
-const inputCedula = document.querySelector("#cedula");
-const inputTelefono = document.querySelector("#telefono");
+const inputNombre = document.querySelector("#name");
+const inputApellido = document.querySelector("#lastname");
+const inputTelefono = document.querySelector("#phone");
 const inputEmail = document.querySelector("#email");
-const inputRol = document.querySelector("#rol");  
-const inputContraseña = document.querySelector("#contraseña");
+const inputDireccion = document.querySelector("#address");  
+const inputContraseña = document.querySelector("#password");
+const inputRol = document.querySelector("#rol_id");
 const form = document.querySelector("#formRegistro");
 const url = "https://backendprojectfundation.onrender.com";
 const alertMessage = document.querySelector("#alert");
@@ -29,13 +29,13 @@ async function mostrarInformacion() {
     console.log(usuario);
 
     if (usuario) {
-      document.getElementById("nombres").value = usuario.name;
-      document.getElementById("apellidos").value = usuario.lastname;
-      document.getElementById("cedula").value = usuario.cedula;
-      document.getElementById("telefono").value = usuario.telefono;
+      document.getElementById("name").value = usuario.name;
+      document.getElementById("lastname").value = usuario.lastname;
+      document.getElementById("phone").value = usuario.phone;
       document.getElementById("email").value = usuario.email;
-      document.getElementById("rol").value = usuario.rol;
-      document.getElementById("contraseña").value = usuario.contraseña;
+      document.getElementById("address").value = usuario.adress;
+      document.getElementById("password").value = usuario.password;
+      document.getElementById("rol_id").value = usuario.rol_id;
     } else {
       console.log("Estructura de datos inesperada:", usuario);
     }
@@ -56,9 +56,9 @@ async function validarFormulario(evt) {
   const usuarioNuevo = await actualizar(
     inputNombre.value,
     inputApellido.value,
-    inputCedula.value,
     inputTelefono.value,
     inputEmail.value,
+    inputDireccion.value,
     inputRol.value,
     inputContraseña.value
   );
@@ -75,11 +75,11 @@ async function validarFormulario(evt) {
 async function actualizar(
   name,
   lastname,
-  cedula,
-  telefono,
+  phone,
   email,
-  rol,
-  contraseña
+  address,
+  password,
+  rol_id
 ) {
   try {
     const params = new URLSearchParams(window.location.search);
@@ -89,11 +89,11 @@ async function actualizar(
     const body = {
       name,
       lastname,
-      cedula,
-      telefono,
+      phone,
       email,
-      rol,
-      contraseña,
+      address,
+      password,
+      rol_id,
     };
     console.log("Datos a enviar:", body);
 

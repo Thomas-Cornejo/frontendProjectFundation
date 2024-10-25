@@ -50,13 +50,33 @@
                     <div class="input-group mb-3">
                         <select class="form-select" id="breed_id" required>
                             <option value="">Seleccione una raza</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
                         </select>
                     </div>
-
+                    <script>
+                        const url = "https://backendprojectfundation.onrender.com/animals/breeds";
+                        async function cargarRazas() {
+                            try {
+                                const response = await fetch(url); 
+                                if (!response.ok) {
+                                    throw new Error('Error al obtener las razas');
+                                }
+                                
+                                const breeds = await response.json(); 
+                                const selectElement = document.querySelector("#breed_id"); 
+                                
+                                breeds.forEach(breed => {
+                                    const option = document.createElement("option"); 
+                                    option.value = breed.id; 
+                                    option.textContent = breed.name; 
+                                    selectElement.appendChild(option); 
+                                });
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }
+                    
+                        window.addEventListener("DOMContentLoaded", cargarRazas);
+                    </script>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Edad estimada del animal" id="stimated_date_birth"
                             aria-describedby="basic-addon1" required />

@@ -11,10 +11,10 @@ async function mostrarInformacion() {
     console.log(usuario);
 
     document.getElementById("name").textContent = usuario.name;
-    document.getElementById("lastName").textContent = usuario.lastname;
+    document.getElementById("lastname").textContent = usuario.lastname;
     document.getElementById("email").textContent = usuario.email;
     document.getElementById("phone").textContent = usuario.telefono;
-    document.getElementById("cedula").textContent = usuario.cedula;
+    document.getElementById("address").textContent = usuario.address;
     } catch (error) {
     console.log("error");
     }

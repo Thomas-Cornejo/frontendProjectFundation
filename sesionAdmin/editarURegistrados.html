@@ -40,32 +40,38 @@
             <div class="row justify-content-center">
                 <form id="formRegistro">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Nombres" id="nombres"
+                        <input type="text" class="form-control" placeholder="Nombres" id="name"
                             aria-describedby="basic-addon1" required oninput="validarInput(this)"/>
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Apellidos" id="apellidos"
+                        <input type="text" class="form-control" placeholder="Apellidos" id="lastname"
                             aria-describedby="basic-addon1" required oninput="validarInput(this)"/>
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Correo" id="email"
-                            aria-describedby="basic-addon1" required />
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Cedula" id="cedula"
+                        <input type="tel" class="form-control" placeholder="Telefono" id="phone"
                             aria-describedby="basic-addon1" required oninput="validarNumerico(this)"/>
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="tel" class="form-control" placeholder="Telefono" id="telefono"
+                        <input type="tel" class="form-control" placeholder="Correo" id="email"
                             aria-describedby="basic-addon1" required oninput="validarNumerico(this)"/>
                     </div>
 
                     <div class="input-group mb-3">
-                        <select class="form-select" id="rol" required>
+                        <input type="tel" class="form-control" placeholder="Dirección" id="address"
+                            aria-describedby="basic-addon1" required oninput="validarNumerico(this)"/>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Contraseña" id="password"
+                            aria-describedby="basic-addon1" required oninput="validarNumerico(this)"/>
+                    </div>
+
+                    
+
+                    <div class="input-group mb-3">
+                        <select class="form-select" id="rol_id" required>
                             <option value="">Seleccione un rol</option>
                             <option value="Admin">Admin</option>
                             <option value="Veterinario">Veterinario</option>
