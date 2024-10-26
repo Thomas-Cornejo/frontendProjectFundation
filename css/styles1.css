@@ -36,7 +36,14 @@ body{
 }
 
 .container span{
-    font-size: 12px;
+    font-size: 16px;
+}
+.line-span {
+    display: block;      /* Para que ocupe toda la línea y se comporte como un div */
+    width: 70%;    
+    height: 2px;         /* Grosor de la línea */
+    background-color: black; 
+    margin: 1px;      /* Espacio arriba y abajo de la línea */
 }
 
 .container a{
@@ -47,8 +54,8 @@ body{
 }
 
 .container button{
-    background-color: #ffc107;
-    background: linear-gradient(to right #1e1f1a, #ffc107);
+    background-color: #006d6d;
+    background: linear-gradient(to right #1e1f1a, #006d6d);
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -83,7 +90,7 @@ body{
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 8px;
-    width: 100%;
+    width: 250px;
     outline: none;
 }
 
@@ -144,6 +151,11 @@ body{
     height: 40px;
 }
 
+.social-icons a:hover{
+    background-color: #006d6d;
+    color: white;
+}
+
 .toggle-container{
     position: absolute;
     top: 0;
@@ -162,9 +174,9 @@ body{
 }
 
 .toggle{
-    background-color: #ffc107;
+    background-color: #006d6d;
     height: 100%;
-    background: linear-gradient(to right, #abafc7, #ffc107);
+    background: linear-gradient(to right, #d9dae0, #006d6d);
     color: #fff;
     position: relative;
     left: -100%;

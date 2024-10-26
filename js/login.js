@@ -1,18 +1,20 @@
 const inputEmail = document.querySelector("#email");
 const inputContraseña = document.querySelector("#password");
 const form = document.querySelector("#formLogin");
-const url = "https://backendprojectfundation.onrender.com";
+const url = "http://localhost:3000";
 const alertMessage = document.querySelector("#alert");
 
 form.addEventListener("submit", validarFormulario);
 
 async function validarFormulario(evt) {
   evt.preventDefault();
+  
 
   if (inputEmail.value === "" || inputContraseña.value === "") {
     showAlert("error", "Por favor, complete todos los campos.");
     return;
   }
+  
 
   const entrar = await login(inputEmail.value, inputContraseña.value);
   console.log(entrar);
@@ -21,14 +23,18 @@ async function validarFormulario(evt) {
     location.reload();
     return;
   }
+  
 
   localStorage.setItem("ID_USER", entrar.usuario);
   console.log(localStorage.getItem("ID_USER"));
+  console.log(entrar.usuario);
+  console.log(entrar);
   location.replace("../sesionAdmin/sesion.html");
 }
 
 async function login(email, password) {
   const body = { email, password };
+  console.log(body)
   const res = await fetch(`${url}/login`, {
     headers: {
       "Content-Type": "application/json",
@@ -38,7 +44,7 @@ async function login(email, password) {
   });
 
   const json = await res.json();
-
+  console.log(json);
   if (json.error) {
     showAlert("error", json.msg);
     return;

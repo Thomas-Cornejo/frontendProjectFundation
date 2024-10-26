@@ -8,7 +8,7 @@ const inputImage = document.querySelector("#image");
 const inputHistory = document.querySelector("#history")
 const form = document.querySelector("#formRegistro");
 const alertMessage = document.querySelector("#alert");
-const url = "https://backendprojectfundation.onrender.com";
+const url = "http://localhost:3000";
 
 form.addEventListener("submit", validarFormulario);
 
