@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", fetchAnimales);
 
 async function fetchAnimales() {
     try {
-        const response = await fetch('backendprojectfundation-production.up.railway.app/animals');
+        const response = await fetch('https://backendprojectfundation-production.up.railway.app/animals');
         const animales = await response.json();
         console.log(animales);
         const container = document.getElementById("animal-container");

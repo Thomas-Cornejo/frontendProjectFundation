@@ -1,4 +1,4 @@
-const urll = "backendprojectfundation-production.up.railway.app";
+const urll = "https://backendprojectfundation-production.up.railway.app";
 const currentPath = location.pathname;
 
 const rutasAdmin = [
