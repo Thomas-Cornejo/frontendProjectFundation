@@ -1,4 +1,4 @@
-const urll = "http://localhost:3000";
+const urll = "backendprojectfundation-production.up.railway.app";
 const currentPath = location.pathname;
 
 const rutasAdmin = [
