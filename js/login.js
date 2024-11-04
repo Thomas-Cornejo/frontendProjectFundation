@@ -13,7 +13,7 @@ async function validarFormulario(evt) {
   if (inputEmail.value === "" || inputContraseña.value === "") {
     showAlert("error", "Por favor, complete todos los campos.");
     return;
-  }
+  } 
   
 
   const entrar = await login(inputEmail.value, inputContraseña.value);

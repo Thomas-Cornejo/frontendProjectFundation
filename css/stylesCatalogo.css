@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #50a3a2;
+}
+
+header .logo img {
+    width: 60px;
+    height: auto;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+}
+
+header .profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+/* Sidebar Filters */
+.filters {
+    width: 200px;
+    background-color: #a4d0e0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.filters h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.filter-option {
+    margin-bottom: 15px;
+}
+
+.filter-option label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-option input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#animal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background-color: #e6f2f2;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+/* Imagen del animal */
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+    padding: 15px;
+    background-color: #48a9a6;
+    color: #fff;
+}
+
+/* Nombre del animal */
+.card-content h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Información del animal */
+.card-content p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Botón de apadrinamiento */
+.card-button {
+    background-color: #f06292;
+    color: #fff;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color: #ec407a;
+}
+
+.card-button span {
+    font-size: 18px;
+    margin-left: 5px;
+}

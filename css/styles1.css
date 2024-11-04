@@ -68,6 +68,12 @@ body{
     cursor: pointer;
 }
 
+.container button.active,
+.container button:hover{
+    background-color: #011d1d;
+    background: linear-gradient(to right #171816, #004f4f);
+}
+
 .container button.hidden{
     background-color: transparent;
     border-color: #fff;
@@ -90,7 +96,7 @@ body{
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 8px;
-    width: 250px;
+    width: 280px;
     outline: none;
 }
 

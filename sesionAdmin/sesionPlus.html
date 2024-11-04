@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+    <link rel="stylesheet" href="../css/stylesSesion.css">
+    <link rel="stylesheet" href="../css/stylesBorderNav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../images/imgAnimals/S.nest sin linea.png" alt="Logo" class="logo">
+        <h1>Solidarity Animal</h1>
+        <nav>
+            <a href="#">Ahijados </a>
+            <a href="#">Adoptados</a>
+            <a href="#"><img src="../images/imgAnimals/donateIcon1.png" alt="donate" class="img-small">Donaciones</a>
+            <a href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
+            <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Salir</a>
+        </nav>
+    </div>
+    <div class="content">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="tabs">
+                <a href="#">NOSOTROS</a>
+                <a href="#">ADOPTANOS</a>
+                <a href="#">APADRINANOS</a>
+                <a href="#">APÓYANOS</a>
+            </div>
+            <div class="profile">
+                <span>Thomas Cornejo</span>
+                <img src="" alt="Usuario">
+                
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="../images/imgProfile/userProfile.png" alt="Foto de perfil">
+            </div>
+            <div class="buttons">
+                <button class="change-btn">Cambiar imagen</button>
+                <button class="delete-btn">Eliminar imagen</button>
+            </div>
+        </div>
+        
+
+        <!-- Formulario -->
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@email.com">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número telefónico</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="3124567890">
+            </div>
+            <div class="form-group">
+                <label for="genero">Género</label>
+                <div class="gender-checklist">
+                    <label><input type="radio" name="genero" value="Masculino"> Masculino</label>
+                    <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
+                    <label><input type="radio" name="genero" value="Otro"> Otro</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion">
+            </div>
+        </div>        
+</body>
+</html>

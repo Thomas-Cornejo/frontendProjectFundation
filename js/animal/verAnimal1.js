@@ -3,34 +3,23 @@ document.addEventListener("DOMContentLoaded", fetchAnimales);
 async function fetchAnimales() {
     try {
         const response = await fetch('http://localhost:3000/animals');
-        const animales = await response.json(); 
+        const animales = await response.json();
         console.log(animales);
         const container = document.getElementById("animal-container");
         container.innerHTML = "";
 
         animales.forEach((animal) => {
             const animalCard = `
-                <div class="item dog col-md-4 col-lg-3 my-4">
-                    <div class="card position-relative">
-                        <a href="#" class="popup-trigger" data-popup-text="<strong>Fecha de nacimiento:</strong> ${animal.stimated_date_birth}<br><strong>Raza:</strong> ${animal.breed_id}<br><strong>Historia:</strong> ${animal.history}<br><strong>Enfermedades:</strong> ${animal.enfermedades}">
-                            <img src="${animal.image}" class="img-fluid rounded-4" alt="image" title="Haz clic para ver más detalles sobre ${animal.name}">
-                        </a>
-                        <div class="card-body p-0">
-                            <a href="single-product.html">
-                                <h3 class="card-title pt-4 m-0">${animal.name}</h3>
-                            </a>
-                            <div class="card-text">
-                                <div class="d-flex flex-wrap mt-3">
-                                    <a href="formularioAdoptar.html" class="btn-cart me-3 px-4 pt-3 pb-3">
-                                        <h5 class="text-uppercase m-0">Adoptar</h5>
-                                    </a>
-                                    <a href="#" class="btn-wishlist px-4 pt-3 ">
-                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card">
+                    <div class="isotope-container row">
+                        <img src="${animal.image}" alt="Animal">
                     </div>
+                    <div class="card-content">
+                        <h3>${animal.name}</h3>
+                        <p>${animal.breed_id}</p>
+                        <p>${animal.age} años <span>•</span> ${animal.sex}</p>
+                    </div>
+                    <button class="card-button">APADRINAR <span>🐾</span></button>
                 </div>`;
             container.insertAdjacentHTML("beforeend", animalCard);
         });

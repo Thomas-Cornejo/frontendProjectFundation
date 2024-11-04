@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #e7e7e7;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-small {
+    width: 20px;   
+    height: auto;  
+    vertical-align: middle;
+    margin-right: 16px; 
+}
+
+.sidebar .logo {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.sidebar h1 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.sidebar nav {
+    width: 100%;
+    margin-top: 20px;
+}
+.sidebar i {
+    font-size: 20px;   /* Ajusta este tamaño según lo que necesites */
+    text-align: center;
+    padding: 0px;
+    margin-right: 10px;
+    color: black;
+}
+.sidebar nav a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.sidebar nav a:hover {
+    background-color: #f0f0f0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #40a3c4;
+    color: white;
+    border-radius: 10px;
+}
+.logo {
+    width: 500px; 
+    height: auto; 
+    margin-bottom: 5px; 
+}
+
+.header .tabs a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.header .tabs a:hover {
+    text-decoration: underline;
+}
+
+.header .profile {
+    display: flex;
+    align-items: center;
+}
+
+.header .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y los botones */
+    gap: 15px; /* Espacio entre la imagen y los botones */
+    margin-top: 20px; /* Separación superior */
+}
+
+.profile-image img {
+    width: 150px; /* Tamaño de la imagen */
+    height: auto;
+    border-radius: 50%; /* Hace la imagen redonda */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px; 
+}
+
+.change-btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas y filas */
+    margin-top: 50px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.gender-checklist {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+input {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.gender-checklist label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.gender-checklist input[type="radio"] {
+    margin-right: 5px;
+    transform: translateY(1px);
+}
+
+.gender-checklist input[type="radio"] {
+    margin-right: 5px;
+    transform: translateY(-2.5px);
+}
+
