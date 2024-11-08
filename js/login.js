@@ -29,7 +29,7 @@ async function validarFormulario(evt) {
   console.log(localStorage.getItem("ID_USER"));
   console.log(entrar.usuario);
   console.log(entrar);
-  location.replace("../sesionAdmin/sesion.html");
+  location.replace("../sesionAdmin/sesionPlus.html");
 }
 
 async function login(email, password) {

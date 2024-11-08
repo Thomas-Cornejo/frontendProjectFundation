@@ -16,7 +16,7 @@ body {
 header {
     display: flex;
     align-items: center; /* Alinear verticalmente */
-    background-color: #006d6d;
+    background-color: #40a3c4;
     color: white;
     padding: 20px; /* Espaciado en el header */
 }
@@ -60,7 +60,7 @@ header nav ul li a {
     border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
-    color: #006d6d;
+    color: #40a3c4;
     width: 180px;
     text-decoration: none; /* Quitar el subrayado de los enlaces */
 }
@@ -101,7 +101,7 @@ main {
 }
 
 .welcome h1 {
-    color: #006d6d;
+    color: #40a3c4;
     font-size: 2.5em;
 }
 
@@ -112,7 +112,7 @@ main {
 .about h2, .join-us h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #006d6d;
+    color: #40a3c4;
 }
 
 .about p, .join-us p {
@@ -136,7 +136,7 @@ main {
 }
 
 .contact h3 {
-    color: #006d6d;
+    color: #40a3c4;
     font-size: 1.5em;
     margin-bottom: 20px;
 }

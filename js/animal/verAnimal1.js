@@ -18,7 +18,6 @@ async function fetchAnimales() {
                         <h3>${animal.name}</h3>
                         <p>${animal.breed_id}</p>
                         <p>${animal.age} años <span>•</span> ${animal.sex}</p>
-                    </div>
                     <button class="card-button">APADRINAR <span>🐾</span></button>
                 </div>`;
             container.insertAdjacentHTML("beforeend", animalCard);
@@ -30,7 +29,6 @@ async function fetchAnimales() {
         console.error("Error fetching animales:", error);
     }
 }
-
 function registerPopupEvents() {
     document.querySelectorAll(".popup-trigger").forEach(trigger => {
         console.log("Registrando evento click para: ", trigger);
@@ -42,7 +40,6 @@ function registerPopupEvents() {
         });
     });
 }
-
 function showPopup(title, content) {
     const popup = document.createElement("div");
     popup.classList.add("popup");

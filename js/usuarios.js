@@ -32,8 +32,6 @@ async function filtroRol() {
       "</div></td></tr>";
     document.querySelector("#root").insertAdjacentHTML("afterbegin", array);
   }
-  
-  
 }
 
 async function mostrarInformacion() {

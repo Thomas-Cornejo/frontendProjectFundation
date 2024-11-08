@@ -10,13 +10,13 @@ async function mostrarInformacion() {
     const usuario = await response.json();
     console.log(usuario);
 
-    document.getElementById("name").textContent = usuario.name;
-    document.getElementById("lastname").textContent = usuario.lastname;
-    document.getElementById("email").textContent = usuario.email;
-    document.getElementById("phone").textContent = usuario.phone;
-    document.getElementById("address").textContent = usuario.address;
+    document.getElementById("name").value = usuario.name;
+    document.getElementById("lastname").value = usuario.lastname;
+    document.getElementById("email").value = usuario.email;
+    document.getElementById("phone").value = usuario.phone;
+    document.getElementById("address").value = usuario.address;
     } catch (error) {
-    console.log("error");
+    console.log("error", error);
     }
 }
 mostrarInformacion();

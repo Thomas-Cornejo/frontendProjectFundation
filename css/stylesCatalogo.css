@@ -7,12 +7,15 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #50a3a2;
+    background-color: #40a3c4;
+    color: white;
+    border-radius: 10px;
 }
 
 header .logo img {
@@ -20,25 +23,94 @@ header .logo img {
     height: auto;
 }
 
-header nav a {
-    color: #fff;
-    margin: 0 15px;
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    position: relative;
+    padding: 10px 15px;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
-header .profile {
-    display: flex;
-    align-items: center;
+nav a::before,
+nav a::after,
+nav a .border-left,
+nav a .border-right {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
 }
 
-header .profile img {
+nav a::before,
+nav a::after {
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+}
+
+nav a::before {
+    top: 0;
+    left: 0;
+    transform-origin: left;
+}
+
+nav a::after {
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+}
+
+nav a .border-left,
+nav a .border-right {
+    height: 100%;
+    width: 2px;
+    transform: scaleY(0);
+}
+
+nav a .border-left {
+    left: 0;
+    top: 0;
+    transform-origin: top;
+}
+
+nav a .border-right {
+    right: 0;
+    top: 0;
+    transform-origin: bottom;
+}
+
+nav a:hover::before,
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+nav a:hover .border-left,
+nav a:hover .border-right {
+    transform: scaleY(1);
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.profile img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-left: 10px;
 }
 
+/* Main Layout */
 main {
     display: flex;
     padding: 20px;
@@ -47,7 +119,7 @@ main {
 /* Sidebar Filters */
 .filters {
     width: 200px;
-    background-color: #a4d0e0;
+    background-color: #40a3c4;
     padding: 20px;
     border-radius: 10px;
     margin-right: 20px;
@@ -75,70 +147,102 @@ main {
     border: 1px solid #ccc;
 }
 
-#animal-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Animal Cards Container */
+#animal-container,
+section { 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-}
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Color de fondo opcional */
+  }
 
-/* Card */
+/* Card Styling */
 .card {
-    background-color: #e6f2f2;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+    height: 400px;
+    background: rgb(103, 132, 150);
+    border-radius: 20px;
     overflow: hidden;
-    text-align: center;
     position: relative;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.first-color{
+    width: 100%;
+    max-width: 250px;
+    height: 160px;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.card:hover {
+    transform: scale(1.05);
 }
 
-/* Imagen del animal */
 .card img {
     width: 100%;
-    height: auto;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    height: 150px;
+    object-fit: cover;
 }
 
-/* Contenido de la tarjeta */
-.card-content {
-    padding: 15px;
-    background-color: #48a9a6;
-    color: #fff;
+.card .img-animal {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    top: -70px;
 }
 
-/* Nombre del animal */
-.card-content h3 {
-    font-size: 18px;
-    margin: 0;
+.card .img-animal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-/* Información del animal */
-.card-content p {
-    font-size: 14px;
-    margin: 5px 0;
+/* Card Text Row */
+.text-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin-top: -80px; 
+    padding: 15px 10px;
 }
 
-/* Botón de apadrinamiento */
+.text-row p {
+    color: #333;
+    font-size: 14px; 
+}
+
+/* Estilo del botón */
 .card-button {
-    background-color: #f06292;
-    color: #fff;
-    border: none;
-    border-radius: 0 0 8px 8px;
-    padding: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #40a3c4;
     font-size: 16px;
     font-weight: bold;
-    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .card-button:hover {
-    background-color: #ec407a;
+    background-color: #358aab; /* Color más oscuro en hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Efecto de elevación */
 }
 
-.card-button span {
-    font-size: 18px;
-    margin-left: 5px;
-}

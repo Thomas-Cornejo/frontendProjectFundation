@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../css/stylesCatalogo.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/stylesCatalogo.css" />
     <title>Apadrina un Amigo</title>
 </head>
-<body>
 
+<body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="logo.png" alt="Logo" />
         </div>
         <nav>
-            <a href="#">NOSOTROS</a>
-            <a href="#">ADOPTANOS</a>
-            <a href="#">APADRINANOS</a>
-            <a href="#">APÓYANOS</a>
+            <a href="#">NOSOTROS
+                <span class="border-left"></span>
+                <span class="border-right"></span>
+            </a>
+            <a href="#">ADOPTANOS
+                <span class="border-left"></span>
+                <span class="border-right"></span>
+            </a>
+            <a href="#">APADRINANOS
+                <span class="border-left"></span>
+                <span class="border-right"></span>
+            </a>
+            <a href="#">APÓYANOS
+                <span class="border-left"></span>
+                <span class="border-right"></span>
+            </a>
             <div class="profile">
                 <span>THOMAS</span>
-                <img src="profile.png" alt="Perfil">
+                <img src="profile.png" alt="Perfil" />
             </div>
         </nav>
     </header>
@@ -29,33 +42,77 @@
             <h3>Encuentra a tu amigo</h3>
             <div class="filter-option">
                 <label>Raza</label>
-                <input type="text" placeholder="CUALQUIERA">
+                <input type="text" placeholder="CUALQUIERA" />
             </div>
             <div class="filter-option">
                 <label>Madurez</label>
-                <input type="text" placeholder="CUALQUIERA">
+                <input type="text" placeholder="CUALQUIERA" />
             </div>
             <div class="filter-option">
                 <label>Tamaño</label>
-                <input type="text" placeholder="CUALQUIERA">
+                <input type="text" placeholder="CUALQUIERA" />
             </div>
             <div class="filter-option">
                 <label>Color</label>
-                <input type="text" placeholder="CUALQUIERA">
+                <input type="text" placeholder="CUALQUIERA" />
             </div>
             <div class="filter-option">
                 <label>Sexo</label>
-                <input type="text" placeholder="CUALQUIERA">
+                <input type="text" placeholder="CUALQUIERA" />
             </div>
         </aside>
 
-        <section class="animal-cards">
-            <div class="isotope-container row" id="animal-container">
-
+        <section>
+            <!-- Tarjetas de ejemplo -->
+            <div class="card">
+                <img src="fondos-de-pantalla-3d-paisaje.jpg" alt="fondo" />
+                <div class="img-animal">
+                    <img src="images.jpeg" alt="Avatar" />
+                </div>
+                <div class="text-row">
+                    <p>Cat Mini</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                </div>
             </div>
-            
+            <div class="card">
+                <div class="first-color">
+                    <p>Blue</p>
+                </div>
+                <div class="img-animal">
+                    <img src="../../../images/imgAnimals/IMGBlue.jpg" alt="Avatar" />
+                </div>
+                <div class="text-row">
+                    <p>Cat Mini</p>
+                    <p>Husky Siberiano</p>
+                    <p>Cat Mini</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                </div>
+                <button class="card-button">Adoptar</button>
+            </div>
+            <div class="card">
+                <img src="fondos-de-pantalla-3d-paisaje.jpg" alt="fondo" />
+                <div class="img-animal">
+                    <img src="images.jpeg" alt="Avatar" />
+                </div>
+                <div class="text-row">
+                    <p>Cat Mini</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                    <p>Husky Siberiano</p>
+                </div>
+            </div>
         </section>
     </main>
-    <script src = "../../../js/animal/verAnimal1.js"></script>
+    <script src="../../../js/animal/verAnimal1.js"></script>
 </body>
+
 </html>
