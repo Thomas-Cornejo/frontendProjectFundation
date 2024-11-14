@@ -9,18 +9,27 @@ async function fetchAnimales() {
         container.innerHTML = "";
 
         animales.forEach((animal) => {
-            const animalCard = `
-                <div class="card">
-                    <div class="isotope-container row">
-                        <img src="${animal.image}" alt="Animal">
-                    </div>
-                    <div class="card-content">
-                        <h3>${animal.name}</h3>
-                        <p>${animal.breed_id}</p>
-                        <p>${animal.age} años <span>•</span> ${animal.sex}</p>
-                    <button class="card-button">APADRINAR <span>🐾</span></button>
-                </div>`;
-            container.insertAdjacentHTML("beforeend", animalCard);
+            const animalCardHTML = `
+        <div class="card">
+            <div class="isotope-container row">
+                <img src="${animal.image}" alt="Imagen de Mascota">
+            </div>
+            <div class="card-content">
+                <h2>${animal.name}</h2>
+                <div class="info">
+                    <p><strong>Team:</strong> Fluff</p>
+                    <p><strong>Breed:</strong> ${animal.breed_id}</p>
+                    <p><strong>Age:</strong> ${animal.age} semanas</p>
+                    <p><strong>Sex:</strong> ${animal.sex === "Male" ? "Male" : "Female"}</p>
+                </div>
+                <div class="button-adopted">
+                    <a href="#" class="adopted">Adoptar</a>
+                </div>
+            </div>
+        </div>`;
+// Luego, puedes insertar esta tarjeta en el DOM, por ejemplo:
+document.getElementById('animal-container').innerHTML += animalCardHTML;
+
         });
 
         // Registrar eventos click después de insertar los elementos en el DOM
