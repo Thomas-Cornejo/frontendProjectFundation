@@ -17,7 +17,7 @@
             <a href="#">Adoptados</a>
             <a href="#"><img src="../images/imgAnimals/donateIcon1.png" alt="donate" class="img-small">Donaciones</a>
             <a href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
-            <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Salir</a>
+            <a href="#" onclick="cerrarSesion()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Salir</a>
         </nav>
     </div>
     <div class="content">
@@ -34,7 +34,6 @@
             <div class="profile">
                 <span>Thomas Cornejo</span>
                 <img src="" alt="Usuario">
-                
             </div>
         </div>
 
@@ -80,7 +79,9 @@
                 <label for="direccion">Dirección</label>
                 <input type="text" id="address" name="direccion" disabled>
             </div>
-        </div>      
+        </div> 
+    </div>
         <script src="../js/sesion/sesion.js"></script>
+        <script src="../js/verificarloginAdmin.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ const inputAddress = document.querySelector("#address");
 const inputPassword = document.querySelector("#password");
 const inputRol = document.querySelector("#rol");
 const form = document.querySelector("#formRegistro");
-const url = "https://backendprojectfundation-production.up.railway.app";
+const url = "http://localhost:3000";
 const alertMessage = document.querySelector("#alert");
 
 form.addEventListener("submit", validarFormulario);

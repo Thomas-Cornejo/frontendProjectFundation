@@ -40,7 +40,6 @@ header nav ul li.active a::after {
     border-radius: 5px; /* Suaviza los bordes */
 }
 
-
 /* Bordes */
 .menu .border {
     position: absolute;

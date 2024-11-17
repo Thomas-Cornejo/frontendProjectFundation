@@ -1,0 +1,105 @@
+:root {
+    --transition-duration: 0.2s;
+    --transition-delay: 0.2s;
+}
+
+.tabs a.border-local {
+    border-bottom: 2px solid #ffffff; /* Puedes ajustar el grosor y el color */
+    padding-bottom: 5px; /* Espacio entre la línea y el texto */
+}
+
+
+.tabs a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: color var(--transition-duration) ease-in-out;
+}
+
+.tabs a .border {
+    position: absolute;
+    background-color: rgb(255, 255, 255); /* Color del borde */
+    transition: transform var(--transition-duration) ease-in-out;
+    z-index: 0; /* Evita que el borde tape el texto */
+}   
+
+
+/* Configuración inicial de los bordes */
+.tabs .border-top,
+.tabs .border-bottom {
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+}
+
+.tabs .border-left,
+.tabs .border-right {
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+}
+
+.tabs .border-top,
+.tabs .border-left {
+    top: 0;
+    left: 0;
+}
+
+.tabs .border-right {
+    top: 0;
+    right: 0;
+}
+
+.tabs .border-bottom {
+    bottom: 0;
+    left: 0;
+}
+
+/* Origen de transformación */
+.tabs .border-top {
+    transform-origin: top left;
+}
+
+.tabs .border-right {
+    transform-origin: top right;
+}
+
+.tabs .border-bottom {
+    transform-origin: bottom right;
+}
+
+.tabs .border-left {
+    transform-origin: bottom left;
+}
+
+/* Animación en hover */
+.tabs a:hover .border-top,
+.tabs a:hover .border-bottom {
+    transform: scaleX(1);
+}
+
+.tabs a:hover .border-left,
+.tabs a:hover .border-right {
+    transform: scaleY(1);
+}
+
+/* Aplicación de retrasos para los bordes */
+.tabs a:hover .border-right {
+    transition-delay: var(--transition-delay);
+}
+
+.tabs a:hover .border-bottom {
+    transition-delay: calc(var(--transition-delay) * 2);
+}
+
+.tabs a:hover .border-left {
+    transition-delay: calc(var(--transition-delay) * 3);
+}
+
+/* Opcional: Cambia el color del texto en hover */
+.tabs a:hover {
+    color: #fdfdfd; 
+}

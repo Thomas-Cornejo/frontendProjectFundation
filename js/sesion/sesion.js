@@ -1,14 +1,11 @@
 async function mostrarInformacion() {
     const id = localStorage.getItem("ID_USER");
-    console.log("ID_USER:", id);
     try {
-    const response = await fetch(`https://backendprojectfundation-production.up.railway.app/usuarios/${id}`);
+    //const response = await fetch(`http://localhost:3000/usuarios/${id}`);
     if (!response.ok) {
         throw new Error("No se pudo obtener el usuario");
     }
-
     const usuario = await response.json();
-    console.log(usuario);
 
     document.getElementById("name").value = usuario.name;
     document.getElementById("lastname").value = usuario.lastname;
@@ -16,7 +13,6 @@ async function mostrarInformacion() {
     document.getElementById("phone").value = usuario.phone;
     document.getElementById("address").value = usuario.address;
     } catch (error) {
-    console.log("error", error);
     }
 }
 mostrarInformacion();
