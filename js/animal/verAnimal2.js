@@ -7,7 +7,7 @@ async function initialize() {
 }
 async function fetchBreeds() {
     try {
-        const response = await fetch('http://localhost:3000/breeds');
+        const response = await fetch('backendprojectfundation-production.up.railway.app/breeds');
         const breeds = await response.json();
         breeds.forEach(breed => {
             breedMap[breed.id] = breed.name;
@@ -19,7 +19,7 @@ async function fetchBreeds() {
 
 async function fetchAnimales() {
     try {
-        const response = await fetch('http://localhost:3000/animals');
+        const response = await fetch('backendprojectfundation-production.up.railway.app/animals');
         const animales = await response.json();
         const container = document.getElementById("animal-container");
         container.innerHTML = "";

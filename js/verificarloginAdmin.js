@@ -16,7 +16,7 @@ async function verificarRol(rolesPermitidos) {
     const token = sessionStorage.getItem("token");
     console.log(token);
 
-    const response = await fetch("http://localhost:3000/api/auth/me", {
+    const response = await fetch("backendprojectfundation-production.up.railway.app/api/auth/me", {
       headers: {
         "Content-Type": "application/json",
       },

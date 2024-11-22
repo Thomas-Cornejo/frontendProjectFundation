@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
         console.log(data);
         try {
-            const response = await fetch(`http://localhost:3000/requests`, {
+            const response = await fetch(`backendprojectfundation-production.up.railway.app/requests`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

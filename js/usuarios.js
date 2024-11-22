@@ -4,7 +4,7 @@ async function filtroRol() {
   document.querySelector("#root").innerHTML = "";
   const rol = inputRol.options[inputRol.selectedIndex].value;
   console.log(rol);
-  const response = await fetch(`http://localhost:3000/filtro/${rol}`);
+  const response = await fetch(`backendprojectfundation-production.up.railway.app/filtro/${rol}`);
   const usuarios = await response.json();
 
   console.log(usuarios);
@@ -30,7 +30,7 @@ async function filtroRol() {
 }
 
 async function mostrarInformacion() {
-  const response = await fetch(`http://localhost:3000/usuarios`);
+  const response = await fetch(`backendprojectfundation-production.up.railway.app/usuarios`);
   const usuarios = await response.json();
 
   for (let i = 0; i < usuarios.length; i++) {

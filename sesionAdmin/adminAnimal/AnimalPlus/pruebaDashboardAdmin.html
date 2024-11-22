@@ -79,7 +79,7 @@
     <script>
         async function fetchRequests() {
             try {
-                const response = await fetch('http://localhost:3000/requests');
+                const response = await fetch('backendprojectfundation-production.up.railway.app/requests');
                 if (!response.ok) {
                     throw new Error('Error al obtener las solicitudes');
                 }
@@ -118,7 +118,7 @@
 
         async function updateStatus(id, status) {
             try {
-                const response = await fetch(`http://localhost:3000/requests/${id}`, {
+                const response = await fetch(`backendprojectfundation-production.up.railway.app/requests/${id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

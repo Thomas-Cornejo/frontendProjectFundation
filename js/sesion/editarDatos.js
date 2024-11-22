@@ -5,7 +5,7 @@ const inputTelefono = document.querySelector("#telefono");
 const inputEmail = document.querySelector("#email");
 const inputContraseña = document.querySelector("#contraseña");
 const form = document.querySelector("#formRegistro");
-const url = "http://localhost:3000";
+const url = "backendprojectfundation-production.up.railway.app";
 const alertMessage = document.querySelector("#alert");
 
 document.addEventListener("DOMContentLoaded", mostrarInformacion);

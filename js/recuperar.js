@@ -1,7 +1,7 @@
 const inputEmail = document.querySelector("#email");
 const inputContraseña = document.querySelector("#contraseña");
 const form = document.querySelector("#formRecuperar");
-const url = "http://localhost:3000";
+const url = "backendprojectfundation-production.up.railway.app";
 const alertMessage = document.querySelector("#alert");
 
 form.addEventListener("submit", validarFormulario);
