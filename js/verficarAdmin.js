@@ -6,7 +6,7 @@ async function cerrarSesion() {
 
 document.addEventListener("DOMContentLoaded", () => {
     if (!sessionStorage.getItem("authChecked")) {
-        verificarRol([1]);
+        verificarRol([2]);
     }
 });
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apadrinar</title>
+    <title>Adoptar</title>
     <link rel="stylesheet" href="../css/stylesApadrinar.css" />
     <link rel="stylesheet" href="../css/stylesBorderHome.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -113,13 +113,13 @@
                     <span class="border border-bottom"></span>
                     <span class="border border-left"></span>
                 </a>
-                <a href="#">ADOPTANOS
+                <a href="#" class="border-local">ADOPTANOS
+                </a>
+                <a href="#">APADRINANOS
                     <span class="border border-top"></span>
                     <span class="border border-right"></span>
                     <span class="border border-bottom"></span>
-                    <span class="border border-left"></span>
-                </a>
-                <a href="#" class="border-local">APADRINANOS </a>
+                    <span class="border border-left"></span> </a>
                 <a href="#">APÓYANOS
                     <span class="border border-top"></span> 
                     <span class="border border-right"></span>
@@ -134,13 +134,27 @@
             </div>
         </div>
         <div id="animal-container">
-            
-            
+            <div class="card">
+                <div class="isotope-container row">
+                    <img src="../images/imgAnimals/IMGBlue.jpg" alt="Imagen de Mascota">
+                </div>
+                <div class="card-content">
+                    <h2>BLUE</h2>
+                    <div class="info">
+                        <p><strong>Breed:</strong> Lobo Siberiano</p>
+                        <p><strong>Edad:</strong> 8 Años</p>
+                        <p><strong>Sexo:</strong> Macho</p>
+                    </div>
+                    <div class="button-adopted">
+                        <a href="../sesionAdmin/adminAnimal/AnimalPlus/formAdoptar.html?id_animal=${animal.id_animal}" class="adopted">Adoptar</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
     <script src="../js/sesion/sesion.js"></script>
-    <script src = "../js/animal/verAnimal1.js"></script>
+    <script src = "../js/animal/verAnimal2.js"></script>
     <!-- <script src="../js/verificarlogin.js"></script> -->
     <script>
         document.querySelectorAll(".dropdownButton").forEach((dropdownButton, index) => {

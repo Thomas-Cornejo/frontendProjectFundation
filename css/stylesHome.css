@@ -135,10 +135,16 @@ main {
     font-size: 1.1em;
     line-height: 1.6;
 }
+.decorative-line {
+    border: none;
+    border-top: 3px solid #40a3c4; 
+    width: 80%; 
+    margin: 0 auto 20px; 
+}
 
 /* Contact */
 .contact {
-    background-color: #f0f0f0;
+    background-color: #e7e7e7;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -147,10 +153,45 @@ main {
 }
 
 .contact h3 {
-    color: #40a3c4;
-    font-size: 1.5em;
+    color: #2a4858;
+    font-size: 1.8em;
     margin-bottom: 20px;
+    font-weight: bold;
 }
+
+.contact .info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.contact .contact-info, .contact .social-media {
+    text-align: left;
+}
+
+.contact .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2a4858;
+}
+
+.contact p {
+    margin: 8px 0;
+    font-size: 1em;
+    color: #2a4858;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact i {
+    font-size: 1.2em;
+    color: #40a3c4;
+}
+
 
 /* Sidebar */
 .sidebar {

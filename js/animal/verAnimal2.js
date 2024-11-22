@@ -7,10 +7,10 @@ async function initialize() {
 }
 async function fetchBreeds() {
     try {
-        const response = await fetch('http://localhost:3000/animals/breeds');
+        const response = await fetch('http://localhost:3000/breeds');
         const breeds = await response.json();
         breeds.forEach(breed => {
-            breedMap[breed.id_breed] = breed.name;
+            breedMap[breed.id] = breed.name;
         });
     } catch (error) {
         console.error("Error fetching breeds:", error);
@@ -36,19 +36,20 @@ async function fetchAnimales() {
             const animalCardHTML = `
             <div class="card">
                 <div class="isotope-container row">
-                    <img src="${animal.image}" alt="Imagen de Mascota">
+                    <img src="${animal.image}" alt="Imagen de Mascota"/>
                 </div>
                 <div class="card-content">
                     <h2>${animal.name}</h2>
                     <div class="info">
+                        <p><strong>Team:</strong> Fluff</p>
                         <p><strong>Breed:</strong> ${breedName}</p>
-                        <p><strong>Age:</strong> ${animal.age}</p>
+                        <p><strong>Age:</strong> ${animal.age} semanas</p>
                         <p><strong>Sex:</strong> ${animal.sex === "1" ? "Macho" : "Hembra"}</p>
                     </div>
                     <div class="button-adopted">
-                        <a href="../sesionAdmin/adminAnimal/AnimalPlus/formApadrinar.html?id_animal=${animal.id_animal}" class="adopted">Apadrinar</a>
+                        <a href="../sesionAdmin/adminAnimal/AnimalPlus/formAdoptar.html?id_animal=${animal.id_animal}" class="adopted">Adoptar</a>
                     </div>
-                </div>
+                </div>  
             </div>`;
             container.innerHTML += animalCardHTML;
         });
@@ -57,4 +58,3 @@ async function fetchAnimales() {
         console.error("Error fetching animales:", error);
     }
 }
-

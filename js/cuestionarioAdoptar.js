@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "/login";
             return;
         }
-
         const animalId = document.getElementById("animal-id").value;
         const reason = document.getElementById("reason").value;
         const experience = document.getElementById("experience").value;
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 availability,
                 question
             },
-            state_id: 1,
+            state_id: 2,
         };
         console.log(data);
         try {
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (response.ok) {
                 alert("Solicitud enviada correctamente. El administrador revisará tus respuestas.");
-                location.replace("../../apadrinarPlus.html"); 
+                location.replace("../../AdoptarPlus.html"); 
             } else {
                 const errorData = await response.json();
                 alert(`Error al enviar la solicitud: ${errorData.message}`);

@@ -214,8 +214,9 @@ input {
 }
 /* Card Styling */
 .card {
-    height: 300px; 
+    height: 350px; /* Incrementé la altura */
     display: flex;
+    flex-direction: column; /* Cambié el flujo a columna */
     align-items: center;
     width: 100%;
     max-width: 300px;
@@ -233,14 +234,15 @@ input {
 }
 
 .card img {
-    width: 100px;
-    height: 100px;
+    width: 150px; 
+    height: 150px; 
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 60px;
+    margin-bottom: 10px; 
 }
 
 .card-content {
+    text-align: center;
     flex: 1;
 }
 
@@ -248,7 +250,53 @@ input {
     margin: 0;
     font-size: 24px;
     color: #ffcc00;
+    margin-bottom: 10px; 
 }
+/* Card Styling */
+.card.empty-card {
+    height: 350px; 
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d3a45;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;    
+}
+
+.card.empty-card:hover {
+    transform: scale(1.05);
+    background-color: #344953; 
+}
+
+
+.add-btn {
+    background-color: #cccccc;
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2d3a45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #40a3c4;
+    transform: scale(1.1);
+}
+
 
 .info {
     margin: 10px 0;
