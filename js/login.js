@@ -18,6 +18,9 @@ async function validarFormulario(evt) {
     location.reload();
     return;
   }
+  sessionStorage.setItem("token", entrar.token);
+  localStorage.setItem("ID_USER", entrar.usuario.id_user);
+
   if (entrar.rol == 1) {
     location.replace("../sesionAdmin/redirectorAdmin.html");
   } else {
@@ -36,7 +39,7 @@ async function login(email, password) {
   });
 
   const json = await res.json();
-
+  console.log("Respuesta del servidor:", json);
   if (json.error) {
     showAlert("error", json.msg);
     return;

@@ -1,0 +1,63 @@
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+/* Table Container */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Table Header */
+thead {
+    background-color: #190e30;
+    color: #fff;
+    text-align: left;
+}
+
+thead th {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Table Body Rows */
+tbody tr {  
+    border-bottom: 1px solid #eaeaea;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f3f2f7;
+}
+
+tbody tr:hover {
+    background-color: #ecebf5;
+}
+
+/* Table Data Cells */
+td {
+    padding: 10px 12px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Actions Column */
+td:last-child {
+    text-align: center;
+}
+
+/* Add Responsive Behavior */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+}

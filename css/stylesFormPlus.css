@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #e7e7e7;
+    margin: 0; 
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100%; 
+}
+
+.sidebar .logo {
+    width: 200px; 
+    border-radius: 50%;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 300px; 
+    overflow-y: auto; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #40a3c4;
+    color: white;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 250px; 
+    width: calc(100% - 320px); 
+    z-index: 1000; 
+}
+
+.header .tabs a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.header .tabs a:hover {
+    text-decoration: underline;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.form-section {
+    max-width: 800px;
+    margin: 100px auto; 
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #00a7d1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+textarea {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    background-color: #fdfdfd;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #00a7d1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #007ba7;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px; 
+    }
+
+    .header {
+        left: 150px; 
+        width: calc(100% - 150px);
+    }
+
+    .content {
+        margin-left: 150px; 
+    }
+
+    .sidebar .logo {
+        width: 100px; 
+    }
+}
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100px; 
+    }
+
+    .header {
+        left: 100px; 
+        width: calc(100% - 100px); 
+    }
+
+    .content {
+        margin-left: 100px; 
+        padding: 10px; 
+    }
+
+    .header .tabs a {
+        margin: 0 5px; 
+        font-size: 14px; 
+    }
+
+    .form-section {
+        margin: 20px; 
+        padding: 10px; 
+    }
+
+    .submit-btn {
+        font-size: 14px; 
+        padding: 8px; 
+    }
+}

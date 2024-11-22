@@ -10,19 +10,18 @@ async function filtroRol() {
   console.log(usuarios);
   for (let i = 0; i < usuarios.length; i++) {
     const usuario = usuarios[i];
-    // Genera la fila con el nombre del rol directamente
     const filaHTML = `
       <tr>
         <td><div>${usuario.name}</div></td>
         <td><div>${usuario.lastname}</div></td>
+        <td><div>${usuario.email}</div></td>
         <td><div>${usuario.phone}</div></td>
         <td><div>${usuario.address}</div></td>
-        <td><div>${usuario.password}</div></td>
-        <td><div>${usuario.rol}</div></td> <!-- Aquí se muestra el nombre del rol -->
+        <td><div>${usuario.rol_id}</div></td> 
         <td>
           <div>
-            <a href="editarURegistrados.html?id=${usuario.id}" class="btn btn-quinto">Editar</a>
-            <button onclick="deshabilitarUsuario(${usuario.id})" class="btn btn-danger" style="margin-left: 5px;">Deshabilitar</button>
+            <a href="editarURegistrados.html?id=${usuario.id_user}" class="btn btn-quinto">Editar</a>
+            <button onclick="deshabilitarUsuario(${usuario.id_user})" class="btn btn-danger" style="margin-left: 5px;">Deshabilitar</button>
           </div>
         </td>
       </tr>`;
@@ -37,17 +36,17 @@ async function mostrarInformacion() {
   for (let i = 0; i < usuarios.length; i++) {
     const usuario = usuarios[i];
     const filaHTML = `
-      <tr id="usuario-${usuario.id}">
+      <tr id="usuario-${usuario.id_user}">
         <td><div>${usuario.name}</div></td>
         <td><div>${usuario.lastname}</div></td>
+        <td><div>${usuario.email}</div></td>
         <td><div>${usuario.phone}</div></td>
         <td><div>${usuario.address}</div></td>
-        <td><div>${usuario.password}</div></td>
-        <td><div>${usuario.rol}</div></td> <!-- Aquí se muestra el nombre del rol -->
+        <td><div>${usuario.rol_id}</div></td> 
         <td>
           <div>
-            <a href="editarURegistrados.html?id=${usuario.id}" class="btn btn-quinto">Editar</a>
-            <button onclick="deshabilitarUsuario(${usuario.id})" class="btn btn-danger" style="margin-left: 5px;">Deshabilitar</button>
+            <a href="editarURegistrados.html?id=${usuario.id_user}" class="btn btn-quinto">Editar</a>
+            <button onclick="deshabilitarUsuario(${usuario.id_user})" class="btn btn-danger" style="margin-left: 5px;">Deshabilitar</button>
           </div>
         </td>
       </tr>`;

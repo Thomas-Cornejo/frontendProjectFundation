@@ -1,7 +1,8 @@
 async function mostrarInformacion() {
     const id = localStorage.getItem("ID_USER");
+    console.log("ID del usuario:", id);
     try {
-    //const response = await fetch(`http://localhost:3000/usuarios/${id}`);
+    const response = await fetch(`http://localhost:3000/usuarios/${id}`);
     if (!response.ok) {
         throw new Error("No se pudo obtener el usuario");
     }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Apadrinamiento</title>
+    <link rel="stylesheet" href="../../../css/stylesFormPlus.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="../../../images/imgAnimals/S.nest sin linea.png" alt="Logo" class="logo">
+        <h1>Solidarity Animal</h1>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="tabs">
+                <a href="#">NOSOTROS</a>
+                <a href="#">ADÓPTANOS</a>
+                <a href="#">APADRÍNANOS</a>
+                <a href="#">APÓYANOS</a>
+            </div>
+            <div class="user-profile">
+                <span>THOMAS</span>
+                <img src="user-icon.png" alt="Usuario">
+            </div>
+        </div>
+        <main>
+            <section class="form-section">
+                <h1>Realiza el siguiente formulario</h1>
+                <form id="questionnaire-form">
+                    <input type="hidden" id="animal-id" value="">
+                    <div class="form-group">
+                        <label>¿Por qué te gustaría apadrinar un animal?</label>
+                        <textarea id="reason" name="reason" placeholder="Ingrese su respuesta aquí" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Has apadrinado algún animal antes?</label>
+                        <textarea id="experience" name="experience" placeholder="Ingrese su respuesta aquí" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cuánto tiempo estás dispuesto a comprometerte para el apadrinamiento?</label>
+                        <textarea id="time" name ="time" placeholder="Ingrese su respuesta aquí" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Estás dispuesto a cubrir gastos asociados con el cuidado animal?</label>
+                        <textarea id="cost" name ="cost" placeholder="Ingrese su respuesta aquí" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Te gustaría recibir actualizaciones periódicas sobre el animal que apadrines?</label>
+                        <textarea id="notification" name ="notification" placeholder="Ingrese su respuesta aquí" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Estás interesado en participar en actividades o eventos organizados por la
+                            fundación?</label>
+                        <textarea id="events" name ="events" placeholder="Ingrese su respuesta aquí" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cuál es tu disponibilidad para participar en el cuidado y apoyo del animal que vas a
+                            apadrinar? ¿Estás comprometido a mantener una relación constante con tu ahijado?</label>
+                            <textarea id="availability" name ="availability" placeholder="Ingrese su respuesta aquí" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Tienes alguna pregunta o inquietud sobre el proceso de apadrinamiento?</label>
+                        <textarea id="question" name ="question" placeholder="Ingrese su respuesta aquí" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">ENVIAR</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="../../../js/cuestionario.js"></script>
+</body>
+</html>

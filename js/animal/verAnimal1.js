@@ -40,9 +40,9 @@ async function fetchAnimales() {
                         <p><strong>Sex:</strong> ${animal.sex === "1" ? "Macho" : "Hembra"}</p>
                     </div>
                     <div class="button-adopted">
-                        <a href="#" class="adopted">Adoptar</a>
+                        <a href="../sesionAdmin/adminAnimal/AnimalPlus/formApadrinar.html?id_animal=${animal.id_animal}" class="adopted">Apadrinar</a>
                     </div>
-                </div>
+                </div>s
             </div>`;
             container.innerHTML += animalCardHTML;
         });
@@ -51,3 +51,4 @@ async function fetchAnimales() {
         console.error("Error fetching animales:", error);
     }
 }
+

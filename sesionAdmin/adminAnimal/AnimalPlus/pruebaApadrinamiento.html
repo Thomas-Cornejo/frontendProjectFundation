@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Apadrinamiento</title>
+</head>
+<body>
+    <h1>Formulario de Apadrinamiento</h1>
+    <form id="adoptionForm">
+        <label for="user_id">ID del Usuario:</label>
+        <input type="number" id="user_id" name="user_id" required><br>
+
+        <label for="animal_id">ID del Animal:</label>
+        <input type="number" id="animal_id" name="animal_id" required><br>
+
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('adoptionForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Evita el envío del formulario tradicional.
+
+            const userId = document.getElementById('user_id').value;
+            const animalId = document.getElementById('animal_id').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/requests', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        user_id: userId,
+                        animal_id: animalId,
+                    }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error al enviar la solicitud.');
+                }
+
+                const result = await response.json();
+                alert('Solicitud enviada con éxito: ' + JSON.stringify(result));
+            } catch (error) {
+                console.error(error);
+                alert('Hubo un error al enviar la solicitud.');
+            }
+        });
+    </script>
+</body>
+</html>

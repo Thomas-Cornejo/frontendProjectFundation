@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/stylesHome.css">
+    <link rel="stylesheet" href="../../../css/stylesBorderHome.css">
+    <link rel="stylesheet" href="../../../css/stylesTable.css">
+
+
+    <title>Listado de Solicitudes</title>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../../../images/imgAnimals/S.nest sin linea.png" alt="Logo" class="logo">
+        <h1>Solidarity Animal</h1>
+    </div>
+    <div class="content">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="tabs">
+                <a href="#" class="border-local">NOSOTROS</a>
+
+                <a href="#">ADOPTANOS
+                    <span class="border border-top"></span>
+                    <span class="border border-right"></span>
+                    <span class="border border-bottom"></span>
+                    <span class="border border-left"></span>
+                </a>    
+                <a href="#">APADRINANOS
+                    <span class="border border-top"></span>
+                    <span class="border border-right"></span>
+                    <span class="border border-bottom"></span>
+                    <span class="border border-left"></span>
+                </a>
+                    
+                <a href="#">APÓYANOS
+                    <span class="border border-top"></span>
+                    <span class="border border-right"></span>
+                    <span class="border border-bottom"></span>
+                    <span class="border border-left"></span>
+                </a>
+            </div>
+        </div>
+    <h1>Listado de Solicitudes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ID Usuario</th>
+                <th>ID Animal</th>
+                <th>Estado</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="requestsTable">
+            
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchRequests() {
+            try {
+                const response = await fetch('http://localhost:3000/requests');
+                if (!response.ok) {
+                    throw new Error('Error al obtener las solicitudes');
+                }
+                const requests = await response.json();
+                console.log('Datos recibidos:', requests);
+                renderRequests(requests.data);
+            } catch (error) {
+                console.error(error);
+                alert('Hubo un problema al cargar las solicitudes.');
+            }
+        }
+
+
+        function renderRequests(requests) {
+            const tableBody = document.getElementById('requestsTable');
+            tableBody.innerHTML = '';
+
+            requests.forEach((request) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${request.id_request}</td>
+                    <td>${request.user_id}</td>
+                    <td>${request.animal_id}</td>
+                    <td>${request.status}</td>
+                    <td>${request.date_request}</td>
+                    <td>
+                        ${request.status === 'pendiente' ? `
+                            <button onclick="updateStatus(${request.id_request}, 'aprobada')">Aprobar</button>
+                            <button onclick="updateStatus(${request.id_request}, 'rechazada')">Rechazar</button>
+                        ` : 'Sin acciones'}
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        async function updateStatus(id, status) {
+            try {
+                const response = await fetch(`http://localhost:3000/requests/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ status }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error al actualizar el estado');
+                }
+
+                alert(`Solicitud ${id} actualizada a ${status}`);
+                fetchRequests(); 
+            } catch (error) {
+                console.error(error);
+                alert('Hubo un problema al actualizar el estado.');
+            }
+        }
+
+        fetchRequests();
+    </script>
+</body>
+</html>

@@ -107,7 +107,7 @@
         <!-- Header -->
         <div class="header">
             <div class="tabs">
-                <a href="#">NOSOTROS
+                <a href="indexHome.html">NOSOTROS
                     <span class="border border-top"></span>
                     <span class="border border-right"></span>
                     <span class="border border-bottom"></span>
@@ -135,38 +135,26 @@
         </div>
         <div id="animal-container">
             <div class="card">
-                <img src="../images/imgAnimals/Golden_Retrevier-removebg-preview.png" alt="Imagen de Mascota" />
+                <div class="isotope-container row">
+                    <img src="../images/imgAnimals/IMGBlue.jpg" alt="Imagen de Mascota">
+                </div>
                 <div class="card-content">
-                    <h2>TIMON</h2>
+                    <h2>BLUE</h2>
                     <div class="info">
-                        <p><strong>Team:</strong> Fluff</p>
-                        <p><strong>Breed:</strong> Terrier</p>
-                        <p><strong>Age:</strong> 13 weeks</p>
-                        <p><strong>Sex:</strong> Male</p>
+                        <p><strong>Breed:</strong> Lobo Siberiano</p>
+                        <p><strong>Edad:</strong> 8 Años</p>
+                        <p><strong>Sexo:</strong> Macho</p>
                     </div>
                     <div class="button-adopted">
-                        <a href="#" class="adopted">Adoptar</a>
+                        <a href="../sesionAdmin/adminAnimal/AnimalPlus/formApadrinar.html?id_animal=${animal.id_animal}" class="adopted">Apadrinar</a>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../images/imgAnimals/Golden_Retrevier-removebg-preview.png" alt="Imagen de Mascota" />
-                <div class="card-content">
-                    <h2>TIMON</h2>
-                    <div class="info">
-                        <p><strong>Team:</strong> Fluff</p>
-                        <p><strong>Breed:</strong> Terrier</p>
-                        <p><strong>Age:</strong> 13 weeks</p>
-                        <p><strong>Sex:</strong> Male</p>
-                    </div>
-                    <div class="button-adopted">
-                        <a href="#" class="adopted">Adoptar</a>
-                    </div>
-                </div>
+                </div>s
             </div>
         </div>
+
     </div>
     <script src="../js/sesion/sesion.js"></script>
+    <script src = "../js/animal/verAnimal1.js"></script>
     <!-- <script src="../js/verificarlogin.js"></script> -->
     <script>
         document.querySelectorAll(".dropdownButton").forEach((dropdownButton, index) => {
